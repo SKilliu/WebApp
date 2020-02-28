@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+body {
+	background-color: lightgreen;
+}
+
+a {
+	font-style: italic;
+	font-weight: 200;
+	text-decoration: none;
+}
+
+a:hover {
+	color: red;
+}
+
+div {
+	width: 500px;
+	margin: 0 auto;
+	text-align: center;
+}

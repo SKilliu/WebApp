@@ -26,10 +26,12 @@ public class ServletOne extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String answer = request.getParameter("answer");
-		
+
 		request.setAttribute("userAnswer", "");
-		
-		if (answer.equals("juva")) {
+
+		if (answer == null) {
+			request.setAttribute("userAnswer", "Make your choise, please");
+		} else if (answer.equals("juva")) {
 			request.setAttribute("userAnswer", "Yeah! You are write!");
 		} else {
 			request.setAttribute("userAnswer", "No! You are wrong!");
