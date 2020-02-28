@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+div {
+	color: white;
+	width: 500px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+body {
+	font-family: Arial Black;
+	height: 100%;
+	background-image: url(/WebApp/pages/styles/images/music-bgimg.jpg);
+	background-size: cover;
+}
+
+a:hover {
+	color: lightblue;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
