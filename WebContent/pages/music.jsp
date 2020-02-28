@@ -18,7 +18,8 @@
 		<source src="${filePath}" type="audio/mpeg">
 	</audio>
 	<br>
-	<br>
+	<b>Now playing: </b>${currentTrack}<br><br>
+	
 	<a href="/WebApp"><b>To main page</b></a>
 </body>
 </html>
