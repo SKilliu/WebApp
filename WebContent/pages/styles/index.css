@@ -1,21 +1,20 @@
 @charset "UTF-8";
 
-p {
-	color: white;
-}
-
 body {
-	background-color: lightgreen;
+	color: white;
+	heght: 100%;
+	background-image: url(/WebApp/pages/styles/images/main_page_bg.png);
+	background-size: cover;
 }
 
 a {
-	font-style: italic;
-	font-weight: 200;
+	color: white;
+	font-weight: 300;
 	text-decoration: none;
 }
 
 a:hover {
-	color: red;
+	color: pink;
 }
 
 div {

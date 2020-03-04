@@ -1,4 +1,4 @@
-package ua.skiliushyk;
+package ua.skiliushyk.servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -30,9 +30,10 @@ public class MusicPageServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// request.setAttribute("filePath", "/WebApp/music/Dust_Clears.mp3");
-		request.getRequestDispatcher("/pages/music.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/pages/music.jsp").forward(request, response);
 	}
-
+	
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String nxt = request.getParameter("nxt");
