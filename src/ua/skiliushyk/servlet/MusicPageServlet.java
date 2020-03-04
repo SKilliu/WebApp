@@ -32,7 +32,7 @@ public class MusicPageServlet extends HttpServlet {
 		// request.setAttribute("filePath", "/WebApp/music/Dust_Clears.mp3");
 		getServletContext().getRequestDispatcher("/pages/music.jsp").forward(request, response);
 	}
-	
+
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
