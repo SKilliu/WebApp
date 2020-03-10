@@ -1,13 +1,17 @@
 @charset "UTF-8";
 
-div {
-	color: white;
+.playlist {
+	padding: 20px;
 	width: 500px;
-	margin: 0 auto;
-	text-align: center;
+	text-align: left;
+}
+
+.songslist {
+	
 }
 
 body {
+	color: white;
 	font-family: Arial Black;
 	height: 100%;
 	background-image: url(/WebApp/pages/styles/images/music-bgimg.jpg);
