@@ -9,23 +9,25 @@
 <link href="/WebApp/pages/styles/music_page.css" rel="stylesheet">
 </head>
 <body>
-	<java-classes:date /><br>
+	<java-classes:date />
 	<br>
-	<div class="playlist">
+	<br>
+	<div id="playlist">
 		<form name="player" method="post">
-			<input type="radio" name="nxt" value="0">Clear Bandit<br>
-			<input type="radio" name="nxt" value="1">Nominal<br> <input
-				type="radio" name="nxt" value="2">7 Seconds<br> <input
-				type="submit" value="Choose track">
+			<input type="radio" name="nxt" value="0">Clean Bandit - Dust Clears<br>
+			<input type="radio" name="nxt" value="1">David James Terry - Finding Peace<br> 
+			<input type="radio" name="nxt" value="2">Moonbeam feat. Avis Vox - 7 seconds<br> 
+			<input type="submit" value="Choose track">
 		</form>
-		<br> <br> <b>Now playing: </b>${currentTrack}<br>
+		<br>
+		<br><b>Now playing: </b>${currentTrack}<br>
 		<br>
 		<audio controls>
 			<source src="${filePath}" type="audio/mpeg">
 		</audio>
 		<br> <br>
 	</div>
-	<div class="songslist">
+	<div id="songslist">
 		<form name="songs_selector" method="post">
 			<input type="checkbox" name="song" value="song1">First_song<br>
 			<input type="checkbox" name="song" value="song2">Second_song<br>
