@@ -14,9 +14,9 @@
 	<br>
 	<div id="playlist">
 		<form name="player" method="post">
-			<input type="radio" name="nxt" value="0">Clean Bandit - Dust Clears<br>
-			<input type="radio" name="nxt" value="1">David James Terry - Finding Peace<br> 
-			<input type="radio" name="nxt" value="2">Moonbeam feat. Avis Vox - 7 seconds<br> 
+			<input type="radio" name="playlist" value="0">Clean Bandit - Dust Clears<br>
+			<input type="radio" name="playlist" value="1">David James Terry - Finding Peace<br> 
+			<input type="radio" name="playlist" value="2">Moonbeam feat. Avis Vox - 7 seconds<br> 
 			<input type="submit" value="Choose track">
 		</form>
 		<br>
@@ -29,9 +29,9 @@
 	</div>
 	<div id="songslist">
 		<form name="songs_selector" method="post">
-			<input type="checkbox" name="song" value="song1">First_song<br>
-			<input type="checkbox" name="song" value="song2">Second_song<br>
-			<input type="checkbox" name="song" value="song3">Third_song<br>
+			<input type="checkbox" name="0" value="0">Clean Bandit - Dust Clears<br>
+			<input type="checkbox" name="1" value="1">David James Terry - Finding Peace<br>
+			<input type="checkbox" name="2" value="2">Moonbeam feat. Avis Vox - 7 seconds<br>
 			<input type="submit" value="Add to my playlist">
 		</form>
 	</div>
