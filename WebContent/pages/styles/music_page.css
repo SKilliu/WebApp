@@ -1,12 +1,13 @@
 @charset "UTF-8";
 
-.playlist {
+#playlist {
 	padding: 20px;
 	width: 500px;
 	text-align: left;
+	float: left;
 }
 
-.songslist {
+#songslist {
 	
 }
 
