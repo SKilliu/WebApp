@@ -1,7 +1,9 @@
 package ua.skiliushyk.servlet;
 
 import java.io.IOException;
+import java.util.Collection;
 import java.util.Map;
+import java.util.Set;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -41,44 +43,45 @@ public class MusicPageServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String playlist = request.getParameter("playlist");
 		Map<String, String[]> songs = request.getParameterMap();
-		
-		if (playlist != null) {
-			int soundtrackNumber = Integer.parseInt(playlist);
+		String index = "";
+		int attr = 0;
+
+		// Get keys from a map
+		Set<String> keys = songs.keySet();
+		for (String k : keys) {
+			index = k;
+		}
+
+		// Get values from a map
+		Collection<String[]> values = songs.values();
+		for (String[] v : values) {
+			attr = Integer.parseInt(v[0]);
+		}
+
+		if (index.equals("playlist")) {
+
+			// Checking a size of a map
+			System.out.println(songs.size());
+
+			int soundtrackNumber = attr;
 			Soundtrack soundtrack = new Soundtrack();
 			String pathToFile = soundtrack.soundtrackFinder(soundtrackNumber).getPathToFile();
 			soundtrack.setPathToFile(pathToFile);
 			soundtrack.setTrackTitle(Constants.SOUNDTRACKS[soundtrackNumber]);
 			request.setAttribute("filePath", pathToFile);
 			request.setAttribute("currentTrack", soundtrack.getTrackTitle());
+		} else if (index.length() == 1) {
+			for (Map.Entry<String, String[]> entry : songs.entrySet()) {
+				String val = "";
+				for (String tmp : entry.getValue()) {
+					val = val + tmp;
+				}
+				System.out.println(entry.getKey() + " = " + val);
+			}
 		} else {
 			request.setAttribute("currentTrack", "Choose your track");
 		}
-		
-		if (songs != null) {
-			 for (Map.Entry<String, String[]> entry : songs.entrySet()) {
-				 	String val = "";
-				 	for(String tmp : entry.getValue()) {
-				 		val = val + tmp;
-				 	}
-			        System.out.println(entry.getKey() + " = " + val);           
-			    }
-		} else {
-			System.out.println("No songs in the playlist");
-		}
-//		String nxt = request.getParameter("nxt");
-//		int soundtrackNumber = Integer.parseInt(nxt);
-//		if (nxt == null) {
-//			request.setAttribute("currentTrack", "Choose your track");
-//		} else {
-//			Soundtrack soundtrack = new Soundtrack();
-//			String pathToFile = soundtrack.soundtrackFinder(soundtrackNumber).getPathToFile();
-//			soundtrack.setPathToFile(pathToFile);
-//			soundtrack.setTrackTitle(Constants.SOUNDTRACKS[soundtrackNumber]);
-//			request.setAttribute("filePath", pathToFile);
-//			request.setAttribute("currentTrack", soundtrack.getTrackTitle());
-//		}
 
 		getServletContext().getRequestDispatcher("/pages/music.jsp").forward(request, response);
 	}
