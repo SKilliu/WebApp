@@ -8,4 +8,15 @@
 		<tag-class>ua.skiliushyk.tag.jsp1.DateTag</tag-class>
 		<body-content>empty</body-content>
 	</tag>
+	<tag>
+		<name>playlist</name>
+		<tag-class>ua.skiliushyk.tag.jsp1.PlaylistTag</tag-class>
+		<body-content>scriptless</body-content>
+		<attribute>
+			<name>count</name>
+			<required>true</required>
+			<type>java.lang.Integer</type>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
 </taglib>

@@ -11,17 +11,20 @@
 <body>
 	<java-classes:date />
 	<br>
+	<java-classes:playlist count="5">
+		<input type="radio" name="playlist" value="0">Clean Bandit - Dust Clears<br>
+	</java-classes:playlist>
 	<br>
 	<div id="playlist">
 		<form name="player" method="post">
-			<input type="radio" name="playlist" value="0">Clean Bandit - Dust Clears<br>
-			<input type="radio" name="playlist" value="1">David James Terry - Finding Peace<br> 
-			<input type="radio" name="playlist" value="2">Moonbeam feat. Avis Vox - 7 seconds<br> 
-			<input type="submit" value="Choose track">
+			<input type="radio" name="playlist" value="0">Clean Bandit -
+			Dust Clears<br> <input type="radio" name="playlist" value="1">David
+			James Terry - Finding Peace<br> <input type="radio"
+				name="playlist" value="2">Moonbeam feat. Avis Vox - 7
+			seconds<br> <input type="submit" value="Choose track">
 		</form>
-		<br>
-		<br><b>Now playing: </b>${currentTrack}<br>
-		<br>
+		<br> <br>
+		<b>Now playing: </b>${currentTrack}<br> <br>
 		<audio controls>
 			<source src="${filePath}" type="audio/mpeg">
 		</audio>
@@ -29,10 +32,11 @@
 	</div>
 	<div id="songslist">
 		<form name="songs_selector" method="post">
-			<input type="checkbox" name="0" value="0">Clean Bandit - Dust Clears<br>
-			<input type="checkbox" name="1" value="1">David James Terry - Finding Peace<br>
-			<input type="checkbox" name="2" value="2">Moonbeam feat. Avis Vox - 7 seconds<br>
-			<input type="submit" value="Add to my playlist">
+			<input type="checkbox" name="0" value="0">Clean Bandit - Dust
+			Clears<br> <input type="checkbox" name="1" value="1">David
+			James Terry - Finding Peace<br> <input type="checkbox" name="2"
+				value="2">Moonbeam feat. Avis Vox - 7 seconds<br> <input
+				type="submit" value="Add to my playlist">
 		</form>
 	</div>
 	<br>
