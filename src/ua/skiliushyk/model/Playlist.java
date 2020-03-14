@@ -1,7 +1,13 @@
 package ua.skiliushyk.model;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Playlist {
-	HashMap<Integer, Soundtrack> userPlaylist = new HashMap<Integer, Soundtrack>();
+	Map<Integer, Soundtrack> userPlaylist = new HashMap<>();
+	private int totalCount = 0;
+	
+	public void addTrack(int trackId, String pathToTrack) {
+		
+	}
 }

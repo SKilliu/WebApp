@@ -8,6 +8,7 @@ public class Soundtrack implements Serializable {
 	private static final long serialVersionUID = 7987572486508574055L;
 	String pathToFile;
 	String trackTitle;
+	String trackId;
 	//String trackPerformer;
 
 	public Soundtrack() {
