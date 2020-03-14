@@ -8,6 +8,11 @@ public class Playlist {
 	private int totalCount = 0;
 	
 	public void addTrack(int trackId, String pathToTrack) {
+		Soundtrack soundtrack = new Soundtrack(trackId, pathToTrack);
+		userPlaylist.put(trackId, soundtrack);
+	}
+	
+	public String playlistOuter() {
 		
 	}
 }
