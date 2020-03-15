@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import ua.skiliushyk.Constants;
+import ua.skiliushyk.model.Playlist;
 import ua.skiliushyk.model.Soundtrack;
+import ua.skiliushyk.util.SessionUtils;
 
 /**
  * Servlet implementation class MusicPageServlet
@@ -72,13 +74,9 @@ public class MusicPageServlet extends HttpServlet {
 			request.setAttribute("filePath", pathToFile);
 			request.setAttribute("currentTrack", soundtrack.getTrackTitle());
 		} else if (index.length() == 1) {
-			for (Map.Entry<String, String[]> entry : songs.entrySet()) {
-				String val = "";
-				for (String tmp : entry.getValue()) {
-					val = val + tmp;
-				}
-				System.out.println(entry.getKey() + " = " + val);
-			}
+			Playlist playlist = SessionUtils.getCurrentPlaylist(request);
+			
+			
 		} else {
 			request.setAttribute("currentTrack", "Choose your track");
 		}

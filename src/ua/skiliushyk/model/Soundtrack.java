@@ -6,9 +6,9 @@ import ua.skiliushyk.Constants;
 
 public class Soundtrack implements Serializable {
 	private static final long serialVersionUID = 7987572486508574055L;
-	String pathToFile;
-	String trackTitle;
-	int trackId;
+	private String pathToFile;
+	private String trackTitle;
+	private int trackId;
 	//String trackPerformer;
 
 	public Soundtrack() {

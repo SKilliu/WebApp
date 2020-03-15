@@ -1,5 +1,6 @@
 package ua.skiliushyk.model;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,7 +13,14 @@ public class Playlist {
 		userPlaylist.put(trackId, soundtrack);
 	}
 	
-	public String playlistOuter() {
-		
+	public Collection<Soundtrack> getItems() {
+		return userPlaylist.values();
+	}
+	
+	
+	public String playlistOuter(Playlist playlist) {
+		StringBuilder stringToOut = new StringBuilder();
+		for( )
+		return stringToOut.toString();
 	}
 }
