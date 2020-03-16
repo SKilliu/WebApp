@@ -1,22 +1,18 @@
 package ua.skiliushyk.model;
 
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 public class Playlist {
-	Map<Integer, Soundtrack> userPlaylist = new HashMap<>();
-	private int totalCount = 0;
+	ArrayList<Soundtrack> userPlaylist = new ArrayList<Soundtrack>();
 	
-	public void addTrack(int trackId, String pathToTrack) {
-		Soundtrack soundtrack = new Soundtrack(trackId, pathToTrack);
-		userPlaylist.put(trackId, soundtrack);
+	public void addTrack(int trackId) {
+		Soundtrack soundtrack = new Soundtrack();
+		String trackTitle = Soundtrack.trackTitleFinder(trackId);
+		soundtrack.setPathToFile(trackTitle);
+		userPlaylist.add(soundtrack);
 	}
-	
-	public Collection<Soundtrack> getItems() {
-		return userPlaylist.values();
-	}
-	
 	
 	public String playlistOuter(Playlist playlist) {
 		StringBuilder stringToOut = new StringBuilder();

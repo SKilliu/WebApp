@@ -9,51 +9,52 @@ public class Soundtrack implements Serializable {
 	private String pathToFile;
 	private String trackTitle;
 	private int trackId;
-	//String trackPerformer;
+	// String trackPerformer;
 
 	public Soundtrack() {
 		super();
 	}
-	
-	public Soundtrack(int trackId, String pathToFile) {
+
+	public Soundtrack(int trackId, String trackTitle) {
 		super();
 		this.trackId = trackId;
-		this.pathToFile = pathToFile;
+		this.trackTitle = trackTitle;
+		this.setPathToFile(trackTitle);
+	}
+	
+	public int getTrackId() {
+		return this.trackId;
+	}
+	
+	public void setTrackId(int trackId) {
+		this.trackId = trackId;
 	}
 
 	public String getPathToFile() {
 		return this.pathToFile;
 	}
-	
+
 	public void setPathToFile(String trackTitle) {
 		this.pathToFile = Constants.FOLDER + trackTitle;
 	}
-	
+
 	public String getTrackTitle() {
 		return this.trackTitle;
 	}
-	
+
 	public void setTrackTitle(String trackTitle) {
 		this.trackTitle = trackTitle;
 	}
 
-//	public String getTrackName() {
-//		return this.trackName;
-//	}
-
-//	public void setTrackName(String name) {
-//		this.trackName = name;
-//	}
-	
-	public Soundtrack soundtrackFinder(int soundtrackNumber) {
-		for(int i = 0; i < Constants.SOUNDTRACKS.length; i++) {
-			if (i == soundtrackNumber) {
-				this.setPathToFile(Constants.SOUNDTRACKS[i]);
-				return this;
+	public static String trackTitleFinder(int trackId) {
+		String trackTitle = "";
+		for (int i = 0; i < Constants.SOUNDTRACKS.length; i++) {
+			if (i == trackId) {
+				return trackTitle = Constants.SOUNDTRACKS[i];
 			}
 		}
-		return null;
-	} 
+		return trackTitle;
+	}
 
 	public String toString() {
 		return "Soundtrack: " + " - " + this.pathToFile;
