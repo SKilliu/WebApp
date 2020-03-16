@@ -57,9 +57,9 @@ public class MusicPageServlet extends HttpServlet {
 
 		// Get values from a map
 		Collection<String[]> values = songs.values();
-		for (String[] v : values) {
-			attr = Integer.parseInt(v[0]);
-		}
+		String[] val = new String[values.size()];
+		
+		val = (String []) values.toArray();
 
 		if (index.equals("playlist")) {
 
@@ -67,16 +67,15 @@ public class MusicPageServlet extends HttpServlet {
 			System.out.println(songs.size());
 
 			int soundtrackNumber = attr;
-			Soundtrack soundtrack = new Soundtrack();
-			String pathToFile = soundtrack.soundtrackFinder(soundtrackNumber).getPathToFile();
-			soundtrack.setPathToFile(pathToFile);
-			soundtrack.setTrackTitle(Constants.SOUNDTRACKS[soundtrackNumber]);
+			String pathToFile = Constants.FOLDER + Constants.SOUNDTRACKS[attr];
 			request.setAttribute("filePath", pathToFile);
-			request.setAttribute("currentTrack", soundtrack.getTrackTitle());
+			request.setAttribute("currentTrack", Constants.SOUNDTRACKS[attr]);
 		} else if (index.length() == 1) {
 			Playlist playlist = SessionUtils.getCurrentPlaylist(request);
-			
-			
+			for(int i = 0; i < values.size(); i++) {
+				int ind = Integer.parseInt(values.);
+				playlist.addTrack(trackId);
+			}
 		} else {
 			request.setAttribute("currentTrack", "Choose your track");
 		}
