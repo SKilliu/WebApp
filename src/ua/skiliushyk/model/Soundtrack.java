@@ -46,16 +46,6 @@ public class Soundtrack implements Serializable {
 		this.trackTitle = trackTitle;
 	}
 
-	public static String trackTitleFinder(int trackId) {
-		String trackTitle = "";
-		for (int i = 0; i < Constants.SOUNDTRACKS.length; i++) {
-			if (i == trackId) {
-				return trackTitle = Constants.SOUNDTRACKS[i];
-			}
-		}
-		return trackTitle;
-	}
-
 	public String toString() {
 		return "Soundtrack: " + " - " + this.pathToFile;
 	}

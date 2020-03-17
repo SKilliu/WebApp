@@ -2,12 +2,16 @@ package ua.skiliushyk.model;
 
 import java.util.ArrayList;
 
+import ua.skiliushyk.Constants;
+
 public class Playlist {
 	ArrayList<Soundtrack> userPlaylist = new ArrayList<Soundtrack>();
 
 	public void addTrack(int trackId) {
 		Soundtrack soundtrack = new Soundtrack();
-		String trackTitle = Soundtrack.trackTitleFinder(trackId);
+		String trackTitle = Constants.SOUNDTRACKS[trackId];
+		soundtrack.setTrackId(trackId);
+		soundtrack.setTrackTitle(trackTitle);
 		soundtrack.setPathToFile(trackTitle);
 		userPlaylist.add(soundtrack);
 	}
@@ -15,7 +19,7 @@ public class Playlist {
 	public String playlistOuter(Playlist playlist) {
 		StringBuilder stringToOut = new StringBuilder();
 		char dm = (char) 34;
-		String startTag = "<input type=" + dm + "radio" + dm + "name=" + dm + playlist + dm + "value=" + dm;
+		String startTag = "<input type=" + dm + "radio" + dm + "name=" + dm + "playlist" + dm + "value=" + dm;
 		
 		//<input type="radio" name="playlist" value="0">Clean Bandit - Dust Clears<br>
 		for (Soundtrack s : userPlaylist) {

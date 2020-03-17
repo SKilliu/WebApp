@@ -14,15 +14,11 @@
 	 
 	<div id="playlist">
 	<p>Your playlist</p>
-	<!-- 
 		<form name="player" method="post">
-			<input type="radio" name="playlist" value="0">Clean Bandit - Dust Clears<br>
-			<input type="radio" name="playlist" value="1">David James Terry - Finding Peace<br>
-			<input type="radio"	name="playlist" value="2">Moonbeam feat. Avis Vox - 7 seconds<br>
+			${userPlaylist}
 			<input type="submit" value="Choose track">
 		</form>
 		<br> <br>
-	-->
 		<b>Now playing: </b>${currentTrack}<br> <br>
 		<audio controls>
 			<source src="${filePath}" type="audio/mpeg">
@@ -35,6 +31,7 @@
 			<input type="checkbox" name="0" value="0">Clean Bandit - Dust Clears<br>
 			<input type="checkbox" name="1" value="1">David	James Terry - Finding Peace<br>
 			<input type="checkbox" name="2"	value="2">Moonbeam feat. Avis Vox - 7 seconds<br>
+			<input type="checkbox" name="3"	value="3">Kina - Can We Kiss Forever<br>
 			<input type="submit" value="Add to my playlist">
 		</form>
 	</div>
