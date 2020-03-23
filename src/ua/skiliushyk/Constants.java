@@ -7,5 +7,6 @@ public class Constants {
 
 	public static final String[] SOUNDTRACKS = { "Clean Bandit - Dust Clears.mp3",
 			"David James Terry - Finding Peace.mp3", "Moonbeam feat. Avis Vox - 7 seconds.mp3",
-			"Kina - Can We Kiss Forever.mp3", "Armin Van Buuren, BT feat. Nation Of One - Always.mp3" };
+			"Kina - Can We Kiss Forever.mp3", "Armin Van Buuren, BT feat. Nation Of One - Always.mp3",
+			"Lana Del Rey - Young and Beautiful (Edmofo Remix).mp3" };
 }

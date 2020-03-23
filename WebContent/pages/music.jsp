@@ -33,6 +33,7 @@
 			<input type="checkbox" name="2"	value="2">Moonbeam feat. Avis Vox - 7 seconds<br>
 			<input type="checkbox" name="3"	value="3">Kina - Can We Kiss Forever<br>
 			<input type="checkbox" name="4"	value="4">Armin Van Buuren, BT feat. Nation Of One - Always.mp3<br>
+			<input type="checkbox" name="5"	value="5">Lana Del Rey - Young and Beautiful (Edmofo Remix).mp3<br>
 			<input type="submit" value="Add to my playlist">
 		</form>
 	</div>
